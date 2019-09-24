@@ -6,7 +6,7 @@ module Qmac
 
       def sign(components, key_space, key_provider)
 
-        key = key_provider.private_key_for(key_space)
+        key = key_provider.private_key_for(key_space, create: true)
         raise 'Invalid key space/provider' unless key
 
         digest = OpenSSL::Digest::SHA256.new
