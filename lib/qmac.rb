@@ -1,4 +1,5 @@
 require 'base64'
 require 'connection_pool'
+require 'redis'
 require_relative 'qmac/signer'
 require_relative 'qmac/verifier'
