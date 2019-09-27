@@ -32,7 +32,7 @@ module Qmac
           @configurator = Configurator.new
           yield @configurator
 
-          @connection ||= ConnectionPool.new() do
+          @connection ||= ::ConnectionPool.new() do
             ::Redis.new(url: @configurator.redis_url)
           end
         end
