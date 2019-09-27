@@ -8,7 +8,8 @@ module Qmac
         attr_reader :expiration_interval, :redis_url
 
         def initialize
-          self.expiration_interval = 30.minutes
+          # by default the keys will expire in 30 minutes
+          self.expiration_interval = 1800
         end
 
         def expiration_interval=(value)
