@@ -24,7 +24,12 @@ module Qmac
 
       class << self
         def configure
-          raise 'Config has already been called' if @configurator
+          # when running in AWS Lambda it appears the runtime environment is actually reused.
+          # in that case the configurator has already been setup.
+          if @configurator
+            puts "** configurator already initialized. skipping"
+            return
+          end
 
           # initialize our configurator object
           # and yield it back so that the client
