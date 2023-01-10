@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   # dependencies
   spec.add_runtime_dependency 'connection_pool', '~> 2.2', '>= 2.2.0'
-  spec.add_runtime_dependency 'redis', '~> 3.2', '>= 3.2.1'
+  spec.add_runtime_dependency 'redis', '~> 4.5', '< 4.6.0'
   spec.required_ruby_version = '>=2.1.5'
 
   # Optional fields
