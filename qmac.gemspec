@@ -4,11 +4,11 @@ Gem::Specification.new do |spec|
   spec.files = Dir['lib/*.rb'] + Dir['lib/qmac/*.rb']
   spec.name = 'qmac'
   spec.summary = 'Library for signing and verifying HTTPS requests.'
-  spec.version = '0.1.0'
+  spec.version = '0.2.0'
 
   # dependencies
   spec.add_runtime_dependency 'connection_pool', '~> 2.2', '>= 2.2.0'
-  spec.add_runtime_dependency 'redis', '~> 3.2', '>= 3.2.1'
+  spec.add_runtime_dependency 'redis', '~> 4.5', '< 4.6.0'
   spec.required_ruby_version = '>=2.1.5'
 
   # Optional fields
